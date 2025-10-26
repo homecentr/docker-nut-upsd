@@ -1,6 +1,9 @@
 version: "3.7"
 services:
-  $$IMAGE_NAME$$:
+  nut-upsd:
     build: .
-    image: homecentr/$$IMAGE_NAME$$
+    # image: homecentr/nut-upsd
     restart: unless-stopped
+    volumes:
+      - ./example/eaton.dev:/etc/nut/eaton.dev
+      - ./example/ups.conf:/etc/nut/ups.conf

@@ -13,6 +13,7 @@ jobs:
     permissions:
       contents: write # To add version tags
       packages: write # To push docker image
+      issues: write
     steps:
       - uses: actions/checkout@master
 
